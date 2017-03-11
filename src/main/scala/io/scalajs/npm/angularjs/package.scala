@@ -23,21 +23,4 @@ package object angularjs {
   @JSName("angular")
   object angular extends Angular
 
-  //////////////////////////////////////////////////////////////
-  //    Type Definitions
-  //////////////////////////////////////////////////////////////
-
-  /**
-    * Generically represents Angular options
-    */
-  type AngularOptions = js.Dictionary[_] | js.Object
-
-  //////////////////////////////////////////////////////////////
-  //    Implicit Conversions
-  //////////////////////////////////////////////////////////////
-
-  implicit def durationToInt(duration: FiniteDuration): Int = duration.toMillis.toInt
-
-  implicit def durationToLong(duration: FiniteDuration): Double = duration.toMillis
-
 }

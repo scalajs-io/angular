@@ -27,7 +27,7 @@ lazy val root = (project in file(".")).
 	    "org.scala-lang" % "scala-reflect" % scalaJsVersion,
 	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
 	    "io.scalajs" %%% "dom-html" % scalaJsIOVersion,
-      "io.scalajs" %%% "jquery" % "3.1.1-2"
+      "io.scalajs" %%% "jquery" % "3.1.1-3"
   ))
 
 /////////////////////////////////////////////////////////////////////////////////

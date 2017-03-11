@@ -1,5 +1,6 @@
 package io.scalajs.npm.angularjs
 
+import io.scalajs.RawOptions
 import io.scalajs.npm.angularjs.ResourceOptions.MethodOptions
 
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.|
   * @author lawrence.daniels@gmail.com
   */
 @ScalaJSDefined
-class ResourceOptions(var update: js.UndefOr[MethodOptions | AngularOptions] = js.undefined) extends js.Object
+class ResourceOptions(var update: js.UndefOr[MethodOptions | RawOptions] = js.undefined) extends js.Object
 
 /**
   * Resource Options Companion
