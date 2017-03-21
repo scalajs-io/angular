@@ -217,7 +217,7 @@ outcome onComplete {
 To add the Moment binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "angularjs-bundle" % "1.6.3"
+libraryDependencies += "io.scalajs.npm" %%% "angularjs-bundle" % "1.6.3-1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
