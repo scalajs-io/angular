@@ -3,7 +3,7 @@ package io.scalajs.npm
 import scala.concurrent.duration.FiniteDuration
 import scala.language.implicitConversions
 import scala.scalajs.js
-import scala.scalajs.js.annotation.JSName
+import scala.scalajs.js.annotation.JSGlobal
 import scala.scalajs.js.|
 
 /**
@@ -20,7 +20,7 @@ package object angularjs {
     * Singleton "angular" instance
     */
   @js.native
-  @JSName("angular")
+  @JSGlobal("angular")
   object angular extends Angular
 
 }
