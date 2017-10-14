@@ -1,14 +1,14 @@
 package io.scalajs.npm.angularjs.http
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
+
 import scala.scalajs.js.|
 
 /**
   * AngularJS HTTP Service Configuration
   * @author lawrence.daniels@gmail.com
   */
-@ScalaJSDefined
+
 class HttpConfig(var method: js.UndefOr[String] = js.undefined,
                  var url: js.UndefOr[String] = js.undefined,
                  var params: js.UndefOr[js.Dictionary[js.Any]] = js.undefined,
