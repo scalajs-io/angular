@@ -1,13 +1,12 @@
 import org.scalajs.sbtplugin.ScalaJSPlugin
-import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
 import sbt.Keys.{libraryDependencies, _}
 import sbt._
 
 import scala.language.postfixOps
 
-val scalaJsIOVersion = "0.4.2"
+val scalaJsIOVersion = "0.5.0"
 val apiVersion = scalaJsIOVersion
-val scalaJsVersion = "2.12.3"
+val scalaJsVersion = "2.12.8"
 
 homepage := Some(url("https://github.com/scalajs-io/angular"))
 
@@ -22,12 +21,13 @@ lazy val root = (project in file(".")).
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:implicitConversions", "-Xlint"),
     scalacOptions in(Compile, doc) ++= Seq("-no-link-warnings"),
     autoCompilerPlugins := true,
-    addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full),
+    scalacOptions += "-P:scalajs:sjsDefinedByDefault",
+    addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full),
     libraryDependencies ++= Seq(
 	    "org.scala-lang" % "scala-reflect" % scalaJsVersion,
 	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
 	    "io.scalajs" %%% "dom-html" % scalaJsIOVersion,
-      "io.scalajs" %%% "jquery" % "3.1.1-4"
+      "io.scalajs" %%% "jquery" % scalaJsIOVersion
   ))
 
 /////////////////////////////////////////////////////////////////////////////////
